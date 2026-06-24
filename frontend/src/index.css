@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #faf6ee;
+  color: #2a2a28;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Visible keyboard focus everywhere, per accessibility requirements in the spec */
+:focus-visible {
+  outline: 2px solid #c96e40;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High-contrast mode toggle, used by users with the needs_high_contrast preference
+   or who toggle Accessibility Features manually. */
+.high-contrast {
+  filter: contrast(1.25) saturate(1.1);
+}
+
+.high-contrast body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+::selection {
+  background-color: #f5dcc8;
+}
+
+/* Thin scrollbar for the shelf rails, used sparingly */
+.scroll-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(27, 58, 75, 0.25);
+  border-radius: 999px;
+}
