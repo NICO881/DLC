@@ -220,23 +220,3 @@ A custom Tailwind theme reflecting the school context:
 
 ---
 
-## 6. What's implemented (Phase 1 + groundwork for later phases)
-
-✅ Custom role-based User model (Student / Teacher / Coordinator / Admin)
-✅ Curriculum hierarchy (Education Level → Class → Subject → Topic → Subtopic → Learning Outcome → Competency)
-✅ Forgot-password email reset flow (console email backend for local dev; swap to real SMTP via `.env`)
-✅ Resource upload, edit, archive, restore, soft-delete
-✅ Resource Lifecycle state machine (Draft → Pending Review → Published → Inactive → Archived) with role-gated transitions
-✅ Smart Search (subject, topic, keyword, class, type, language) + free-text search
-✅ Bookmarks, Progress Tracking, Ratings, Download Manager, Resource Sharing
-✅ Notifications, Audit Logs
-✅ Usage Analytics + Storage Monitoring dashboards
-✅ PDF/Video/Audio/Image viewers
-✅ Offline/online connectivity indicator (frontend)
-✅ Role-specific dashboards and navigation matching the permission matrix
-✅ Redesigned Student Dashboard: subject tile grid (read live from the curriculum DB), prominent search bar, and content shelves (Recent Resources, Past Papers, Favorites, Bookmarks, Popular Videos)
-
-🚧 Not yet implemented (left as clear extension points): version control UI,
-real-time notifications (Celery/Redis are wired into settings but tasks
-aren't written yet), AI tutoring/quiz generation (Phase 4), MinIO/Elasticsearch
-swap-in for storage/search at scale.
